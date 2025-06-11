@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    nav {
+      background: #ffffff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      text-decoration: none;
+      color: #00b8b8;
+      font-weight: 500;
+      font-size: 1.1rem;
+      margin-left: 1.5rem;
+    }
+    nav a:hover {
+      color: #007777;
+    }
+    .container {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #00b8b8;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1.5rem;
+    }
+    .card-content h2 {
+      color: #005f5f;
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .card-content p {
+      font-size: 1rem;
+      color: #555;
+    }
+    .hidden {
+      display: none;
+    }
+    .text-section {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+    }
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    form button {
+      background-color: #00b8b8;
+      color: white;
+      padding: 0.8rem 1.4rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #009999;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div style="font-weight: bold; font-size: 1.3rem; color: #00b8b8;">MeDistrib</div>
+    <div>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('about')">About Us</a>
+      <a href="#" onclick="showPage('contact')">Contacts</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="home">
+      <h1>Our Products</h1>
+      <div class="grid">
+        <div class="card">
+          <img src="https://assets.fishersci.com/TFS-Assets/CCG/Fisher-Scientific/product-images/Syringe_14955460_P1_Silo.tif-650.jpg" alt="Sterile Syringes">
+          <div class="card-content">
+            <h2>Sterile Syringes</h2>
+            <p>High-quality sterile syringes available in various sizes.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-9ee8-61f8-983c-adcd38473b83/raw?se=2025-06-11T15%3A36%3A11Z&sp=r&sv=2024-08-04&sr=b&scid=e2ced469-bd74-5dd0-bc49-a11e90fe7b25&skoid=30ec2761-8f41-44db-b282-7a0f8809659b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-10T21%3A14%3A57Z&ske=2025-06-11T21%3A14%3A57Z&sks=b&skv=2024-08-04&sig=D7K0fF9X%2BoCxvKOCmKavIUErfHzsDd4AWeYNFqiyeFI%3D" alt="Medical Gloves">
+          <div class="card-content">
+            <h2>Medical Gloves</h2>
+            <p>Latex and nitrile gloves for surgical and general use.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://assets.hse.ie/media/images/medical_mask.width-320_Sacm0Hc.jpg" alt="Face Masks">
+          <div class="card-content">
+            <h2>Face Masks</h2>
+            <p>Disposable and reusable surgical face masks.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-5b4c-61f8-a13d-b15e3630f3f0/raw?se=2025-06-11T15%3A39%3A21Z&sp=r&sv=2024-08-04&sr=b&scid=bd78abc5-1a14-56a0-b71e-dd5406bb3ac8&skoid=30ec2761-8f41-44db-b282-7a0f8809659b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-10T21%3A15%3A04Z&ske=2025-06-11T21%3A15%3A04Z&sks=b&skv=2024-08-04&sig=EsGL8UBLnB%2B45uGe4ZTbaCP/MnNpIg7o%2BijQF0SzTkE%3D" alt="Disinfectant Solution">
+          <div class="card-content">
+            <h2>Disinfectant Solution</h2>
+            <p>Hospital-grade disinfectants in various formats.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://amsp.africa/all_media/2021/04/%E4%B8%BB%E5%9B%BE-2.jpg" alt="Disposable Gowns">
+          <div class="card-content">
+            <h2>Disposable Gowns</h2>
+            <p>Protective gowns for healthcare workers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about" class="hidden">
+      <h1>About Us</h1>
+      <div class="text-section">
+        <p>
+          We are a dedicated distributor of high-quality medical devices, aiming to provide reliable
+          and certified medical products to healthcare professionals around the globe. Our mission is to
+          ensure access to safe and effective medical supplies for everyone.
+        </p>
+      </div>
+    </div>
+
+    <div id="contact" class="hidden">
+      <h1>Contact Us</h1>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showPage(page) {
+      document.getElementById("home").classList.add("hidden");
+      document.getElementById("about").classList.add("hidden");
+      document.getElementById("contact").classList.add("hidden");
+      document.getElementById(page).classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
